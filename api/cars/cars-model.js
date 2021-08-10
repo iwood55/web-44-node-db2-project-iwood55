@@ -13,8 +13,8 @@ const getById = (id) => {
 const create = async (car) => {
   return db('cars')
   .insert(car)
-  .then(ids => {
-    return getById(ids[0])
+  .then(id => {
+    return getById(id)
   })
 }
 
